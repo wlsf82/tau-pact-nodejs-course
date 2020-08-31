@@ -96,7 +96,6 @@ describe('Clients Service', () => {
 
     test('returns correct body, and statusCode', async () => {
       const response = await postClient(POST_BODY);
-      console.log(response.data);
 
       expect(response.data.id).toEqual(3);
       expect(response.status).toEqual(200);
