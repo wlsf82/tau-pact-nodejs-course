@@ -14,10 +14,11 @@ describe('Clients Service Verification', () => {
       provider: 'Clients Service',
       logLevel: 'DEBUG',
       providerBaseUrl: SERVER_URL,
-      pactUrls: [path.resolve(process.cwd(), './__tests__/contract/pacts/frontend-clientsservice.json')],
+      pactUrls: ['http://localhost:8080/pacts/provider/ClientsService/consumer/Frontend/latest'],
       consumerVersionTags: ['dev'],
       providerVersionTags: ['dev'],
-      providerVersion: '1.0.0'
+      publishVerificationResult: true,
+      providerVersion: '1.0.2'
     };
     return new Verifier(opts)
       .verifyProvider()
