@@ -17,8 +17,8 @@ describe('Clients Service Verification', () => {
       pactUrls: ['http://localhost:8080/pacts/provider/ClientsService/consumer/Frontend/latest'],
       consumerVersionTags: ['dev'],
       providerVersionTags: ['dev'],
-      publishVerificationResult: true,
-      providerVersion: '1.0.3'
+      publishVerificationResult: true, // NOTE: you should only enable this during CI builds. Generally you'd do something like `process.env.CI === 'true'`
+      providerVersion: '1.0.3' // recommended to be the git sha
     };
     return new Verifier(opts)
       .verifyProvider()
