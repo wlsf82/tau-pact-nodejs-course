@@ -11,14 +11,14 @@ server.listen(8081, () => {
 describe('Clients Service Verification', () => {
   it('Validates the expectations of Client Service', () => {
     let opts = {
-      provider: 'Clients Service',
+      provider: 'ClientsService',
       logLevel: 'DEBUG',
       providerBaseUrl: SERVER_URL,
       pactUrls: ['http://localhost:8080/pacts/provider/ClientsService/consumer/Frontend/latest'],
       consumerVersionTags: ['dev'],
       providerVersionTags: ['dev'],
       publishVerificationResult: true,
-      providerVersion: '1.0.2'
+      providerVersion: '1.0.3'
     };
     return new Verifier(opts)
       .verifyProvider()
