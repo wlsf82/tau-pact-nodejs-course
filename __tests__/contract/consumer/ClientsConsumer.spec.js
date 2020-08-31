@@ -94,7 +94,7 @@ describe('Clients Service', () => {
       return provider.addInteraction(interaction);
     });
 
-    test('returns correct body, header and statusCode', async () => {
+    test('returns correct body, and statusCode', async () => {
       const response = await postClient(POST_BODY);
       console.log(response.data);
 
